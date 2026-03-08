@@ -1,9 +1,25 @@
 version: '3.8'
 
 services:
+  db:
+    image: mysql:8.0
+    container_name: exam_system_db
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpass123
+      MYSQL_DATABASE: oems_db
+    ports:
+      - "3306:3306"
+    volumes:
+      - db_data:/var/lib/mysql
+      - ./sql:/docker-entrypoint-initdb.d:ro
+    networks:
+      - exam_network
+
   web:
     build: .
     container_name: exam_system_web
+    restart: always
     ports:
       - "8080:80"
     volumes:
@@ -13,27 +29,11 @@ services:
     networks:
       - exam_network
     environment:
-      - DB_HOST=db
-      - DB_USER=exam_user
-      - DB_PASSWORD=exam_password
-      - DB_NAME=oems_db
-
-  db:
-    image: mysql:8.0
-    container_name: exam_system_db
-    restart: always
-    environment:
-      MYSQL_ROOT_PASSWORD: root_password
-      MYSQL_DATABASE: oems_db
-      MYSQL_USER: exam_user
-      MYSQL_PASSWORD: exam_password
-    ports:
-      - "3306:3306"
-    volumes:
-      - db_data:/var/lib/mysql
-      - ./sql:/docker-entrypoint-initdb.d
-    networks:
-      - exam_network
+      DB_HOST: db
+      DB_USER: root
+      DB_PASSWORD: rootpass123
+      DB_NAME: oems_db
+      DB_PORT: 3306
 
   phpmyadmin:
     image: phpmyadmin:latest
@@ -43,9 +43,8 @@ services:
       - "8081:80"
     environment:
       PMA_HOST: db
-      PMA_PORT: 3306
-      PMA_USER: exam_user
-      PMA_PASSWORD: exam_password
+      PMA_USER: root
+      PMA_PASSWORD: rootpass123
     depends_on:
       - db
     networks:
