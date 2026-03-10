@@ -276,12 +276,12 @@ After importing the sample data (`05_sample_data.sql`), you can use these demo a
 
 | Role | Username | Password |
 |------|----------|----------|
-| **Admin** | admin | Admin@123 |
-| **Instructor** | instructor1 | Pass@1234 |
-| **Instructor** | instructor2 | Pass@1234 |
-| **Student** | student1 | Pass@1234 |
-| **Student** | student2 | Pass@1234 |
-| **Student** | student3 | Pass@1234 |
+| **Admin** | admin | password |
+| **Instructor** | instructor1 | password |
+| **Instructor** | instructor2 | password |
+| **Student** | student1 | password |
+| **Student** | student2 | password |
+| **Student** | student3 | password |
 
 > **Note**: All passwords in `05_sample_data.sql` are hashed using PHP's `password_hash()` function with bcrypt.
 
@@ -472,13 +472,13 @@ student_exams (1) ---- (1) results
 | Role | Username | Password | Description |
 |------|----------|----------|-------------|
 | **Admin** | admin | Admin@123 | Full system access |
-| **Instructor** | instructor1 | Pass@1234 | Dr. Alice Johnson |
-| **Instructor** | instructor2 | Pass@1234 | Prof. Bob Williams |
-| **Instructor** | instructor3 | Pass@1234 | Dr. Carol Martinez |
-| **Instructor** | instructor4 | Pass@1234 | Prof. David Brown |
-| **Student** | student1 | Pass@1234 | Emma Wilson |
-| **Student** | student2 | Pass@1234 | James Anderson |
-| **Student** | student3 | Pass@1234 | Sophia Taylor |
+| **Instructor** | instructor1 | password | Dr. Alice Johnson |
+| **Instructor** | instructor2 | password | Prof. Bob Williams |
+| **Instructor** | instructor3 | password | Dr. Carol Martinez |
+| **Instructor** | instructor4 | password | Prof. David Brown |
+| **Student** | student1 | password | Emma Wilson |
+| **Student** | student2 | password | James Anderson |
+| **Student** | student3 | password | Sophia Taylor |
 
 > **Note**: Change all passwords after first login in production environments.
 
@@ -638,7 +638,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 For questions or support, please open an issue on GitHub.
 
-**Project Link**: [https://github.com/hr628/Online-Examination-Management-System](https://github.com/hr628/Online-Examination-Management-System)
+
 
 ---
 
