@@ -471,7 +471,7 @@ student_exams (1) ---- (1) results
 
 | Role | Username | Password | Description |
 |------|----------|----------|-------------|
-| **Admin** | admin | Admin@123 | Full system access |
+| **Admin** | admin | password | Full system access |
 | **Instructor** | instructor1 | password | Dr. Alice Johnson |
 | **Instructor** | instructor2 | password | Prof. Bob Williams |
 | **Instructor** | instructor3 | password | Dr. Carol Martinez |
