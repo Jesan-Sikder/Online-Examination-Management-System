@@ -29,9 +29,17 @@ main, .container, .container-fluid {
 
 a { text-decoration: none; }
 
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
 /* ── Login Page ─────────────────────────────────────────────── */
 .login-bg {
-    background: linear-gradient(135deg, #0d6efd 0%, #0a58ca 60%, #084298 100%);
+    background: linear-gradient(135deg, #a8e6cf 0%, #b3e5fc 25%, #ffd54f 50%, #81c784 75%, #4fc3f7 100%);
+    background-size: 400% 400%;
+    animation: gradientShift 15s ease infinite;
 }
 
 .login-bg .card {

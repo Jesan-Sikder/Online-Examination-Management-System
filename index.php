@@ -97,10 +97,10 @@ $csrf      = getCSRFToken();
                 <!-- Brand header -->
                 <div class="text-center mb-4">
                     <div class="brand-icon mb-3">
-                        <i class="bi bi-mortarboard-fill display-3 text-primary"></i>
+                        <i class="bi bi-mortarboard-fill display-3 text-white"></i>
                     </div>
-                    <h2 class="fw-bold text-primary">OEMS</h2>
-                    <p class="text-muted">Online Examination Management System</p>
+                    <h2 class="fw-bold text-white">OEMS</h2>
+                    <p class="text-white">Online Examination Management System</p>
                 </div>
 
                 <div class="card shadow-lg border-0">
@@ -160,16 +160,7 @@ $csrf      = getCSRFToken();
                     </div>
                 </div>
 
-                <!-- Demo credentials hint -->
-                <div class="card mt-3 border-0 bg-light">
-                    <div class="card-body py-2 px-3 small text-muted">
-                        <strong>Demo credentials:</strong><br>
-                        Admin: <code>admin</code> / <code>Admin@123</code><br>
-                        Instructor: <code>instructor1</code> / <code>Pass@1234</code><br>
-                        Student: <code>student1</code> / <code>Pass@1234</code>
-                    </div>
-                </div>
-
+                
             </div>
         </div>
     </div>
